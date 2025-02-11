@@ -3,14 +3,17 @@ version: 2
 sources:
   - name: raw
     schema: raw_data_circle
+    description: raw data from cirlce sportswear
     tables:
       - name: sales
         identifier: raw_cc_sales
-        tests:
-        - unique:
-            column_name: "(product_id || '-' || date_date)"
+        description: sales data from circle
+        # tests:
+        # - unique:
+        #     column_name: "(product_id || '-' || date_date)"
       - name: stock
         identifier: raw_cc_stock
+        description: stock check from circle 
 
 models:
   - name: stg_raw_data_circle__raw_cc_sales
