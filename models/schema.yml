@@ -8,12 +8,16 @@ sources:
       - name: sales
         identifier: raw_cc_sales
         description: sales data from circle
-        # tests:
-        # - unique:
-        #     column_name: "(product_id || '-' || date_date)"
       - name: stock
         identifier: raw_cc_stock
         description: stock check from circle 
 
 models:
-  - name: stg_raw_data_circle__raw_cc_sales
+  - name: stg_raw__stock
+    description: cleaning of raw stock
+  - name: stg_raw__sales
+    description: cleaning of raw sales data
+  - name: int_stock_sales
+    description: combination of sales and stock
+  - name: int_stock_sales_by_product
+    description: sales by product
