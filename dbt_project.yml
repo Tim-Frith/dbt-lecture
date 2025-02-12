@@ -38,5 +38,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_lecture:
     # Applies to all files under models/example/
-    example:
+    mart:
       +materialized: table
+      finance:
+        +schema: finance
