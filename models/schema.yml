@@ -8,3 +8,6 @@ sources:
         description: raw stock data from circle
       - name: raw_cc_sales
         description: raw sales data from circle
+        tests:
+          - unique:
+              column_name: "(product_id || '-' || date_date)"
