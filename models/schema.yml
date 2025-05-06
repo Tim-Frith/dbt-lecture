@@ -15,14 +15,14 @@ sources:
           - unique:
               column_name: "(product_id || '-' || date_date)"
 
-# models:
-#   - name: stg_raw__stock
-#     description: cleaned stock data
-#     columns:
-#      - name: product_id
-#        tests:
-#          - unique
-#   - name: stg_raw__sales
-#     description: cleaned sales data
-#   - name: int_stock_sales
-#     description: joined sales and stock data
+models:
+  - name: stg_raw__stock
+    description: cleaned stock data
+    columns:
+     - name: product_id
+       tests:
+         - unique
+  - name: stg_raw__sales
+    description: cleaned sales data
+  - name: int_stock_sales
+    description: joined sales and stock data
