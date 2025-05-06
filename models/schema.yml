@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_data_circle
+    description: data from sportsbrand Circle
+    tables:
+      - name: raw_cc_stock
+        description: raw stock data from circle
+      - name: raw_cc_sales
+        description: raw sales data from circle
