@@ -21,3 +21,5 @@ models:
          - unique
   - name: stg_raw_data_circle__raw_cc_sales
     description: cleaned sales data
+  - name: int_stock_sales
+    description: joined sales and stock data
