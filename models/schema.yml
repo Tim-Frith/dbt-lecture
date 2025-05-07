@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw_data_circle
+    description: data from sportsbrand Circle
+    tables:
+      - name: stock
+        identifier: raw_cc_stock
+        description: raw stock data from circle
+      - name: sales
+        identifier: raw_cc_sales
+        description: raw sales data from circle
+        tests:
+          - unique:
+              column_name: "(product_id || '-' || date_date)"
+
+models:
+  - name: stg_raw__stock
+    description: cleaned stock data
+    columns:
+     - name: product_id
+       tests:
+         - unique
+  - name: stg_raw__sales
+    description: cleaned sales data
+  - name: int_stock_sales
+    description: joined sales and stock data
